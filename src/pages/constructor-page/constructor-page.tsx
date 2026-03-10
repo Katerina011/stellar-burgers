@@ -6,10 +6,12 @@ import { BurgerIngredients } from '../../components';
 import { BurgerConstructor } from '../../components';
 import { Preloader } from '../../components/ui';
 import { FC } from 'react';
+import { selectIngStatus } from 'src/services/slices/ingredientsSlice';
+import { RequestStatus } from '@utils-types';
 
 export const ConstructorPage: FC = () => {
-  /** TODO: взять переменную из стора */
-  const isIngredientsLoading = false;
+  const isIngredientsLoading =
+    useSelector(selectIngStatus) === RequestStatus.Loading;
 
   return (
     <>
