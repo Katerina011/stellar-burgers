@@ -6,7 +6,6 @@ import {
   Route,
   useLocation,
   useNavigate,
-  useParams,
   useMatch
 } from 'react-router-dom';
 
