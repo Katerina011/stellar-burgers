@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals';
 import { RequestStatus, TIngredient } from '@utils-types';
-import ingredientsReducer, { fetchIngredients, IIngredientsState } from './ingredientsSlice';
+import ingredientsReducer, { fetchIngredients, initialState } from './ingredientsSlice';
 
 // Мокируем API
 jest.mock('@api', () => ({
@@ -50,11 +50,6 @@ const mockIngredients: TIngredient[] = [
 ];
 
 describe('ingredientsSlice', () => {
-  const initialState: IIngredientsState = {
-    ingredients: [],
-    requestStatus: RequestStatus.Idle,
-    error: null
-  };
 
   let mockGetIngredientsApi: jest.Mock;
 

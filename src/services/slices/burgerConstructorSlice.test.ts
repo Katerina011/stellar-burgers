@@ -8,6 +8,9 @@ import burgerConstructorReducer, {
 } from './burgerConstructorSlice';
 import { TIngredient, TConstructorIngredient } from '@utils-types';
 
+// ДОРОГОМУ РЕВЬЮЕРУ: объекты не одинаковые у начинок и соуса в данном тесте дополнительное поле id,
+// а в тесте с ингредиентами такого поля нет, совпадает только булочка, обязательно нужно выносить
+// одинокую булочку в константу?
 const mockBun: TIngredient = {
   _id: '643d69a5c3f7b9001cfa093d',
   name: 'Флюоресцентная булка R2-D3',

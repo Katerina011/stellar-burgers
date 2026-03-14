@@ -6,6 +6,7 @@ import ordersReducer, {
   setOrderModal,
   clearOrderModal,
   resetOrders,
+  initialState,
   OrdersState
 } from './ordersSlice';
 import type { TOrder } from '@utils-types';
@@ -45,12 +46,6 @@ const mockCreateOrderResponse = {
 };
 
 describe('ordersSlice', () => {
-  const initialState: OrdersState = {
-    ordersAll: [],
-    orderModal: null,
-    isLoading: false,
-    error: null
-  };
 
   let mockGetOrdersApi: jest.Mock;
   let mockOrderBurgerApi: jest.Mock;

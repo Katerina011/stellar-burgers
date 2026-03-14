@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import feedReducer, { fetchFeed } from './feedSlice';
+import feedReducer, { fetchFeed, initialState } from './feedSlice';
 import { RequestStatus, TOrder, TOrdersData } from '@utils-types';
 // Мокируем API
 jest.mock('@api', () => ({
@@ -29,12 +29,6 @@ const mockFeedData: TOrdersData = {
 };
 
 describe('feedSlice', () => {
-  const initialState = {
-    feedData: { orders: [], total: 0, totalToday: 0 },
-    status: RequestStatus.Idle,
-    error: null
-  };
-
   const mockGetFeedsApi = require('@api').getFeedsApi;
 
   beforeEach(() => jest.clearAllMocks());
