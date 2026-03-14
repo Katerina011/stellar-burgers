@@ -2,13 +2,13 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { TIngredient, RequestStatus } from '@utils-types';
 import { getIngredientsApi } from '@api';
 
-interface IIngredientsState {
+export interface IIngredientsState {
   ingredients: TIngredient[];
   requestStatus: RequestStatus;
   error: string | null;
 }
 
-const initialState: IIngredientsState = {
+export const initialState: IIngredientsState = {
   ingredients: [],
   requestStatus: RequestStatus.Idle,
   error: null

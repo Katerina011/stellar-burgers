@@ -11,7 +11,7 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { RequestStatus, TUser } from '@utils-types';
 import { deleteCookie, setCookie } from '../../utils/cookie';
 
-export interface UserState {
+interface UserState {
   user: TUser | null;
   isAuthChecked: boolean;
   isAuthenticated: boolean;
@@ -19,7 +19,7 @@ export interface UserState {
   error: string | null;
 }
 
-const initialState: UserState = {
+export const initialState: UserState = {
   user: null,
   isAuthChecked: false,
   isAuthenticated: false,
