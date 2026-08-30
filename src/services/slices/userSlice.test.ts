@@ -34,7 +34,11 @@ describe('userSlice', () => {
 
   // SYNCHRONOUS REDUCERS
   test('clearError: сбрасывает ошибку и статус', () => {
-    const state = { ...initialState, error: 'error', status: RequestStatus.Loading };
+    const state = {
+      ...initialState,
+      error: 'error',
+      status: RequestStatus.Loading
+    };
     const newState = userReducer(state, clearError());
     expect(newState.error).toBeNull();
     expect(newState.status).toBe(RequestStatus.Idle);

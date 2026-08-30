@@ -11,7 +11,7 @@ describe('rootReducer', () => {
 
   test('rootReducer(undefined, UNKNOWN_ACTION) возвращает начальное состояние', () => {
     const state = rootReducer(undefined, { type: 'UNKNOWN_ACTION' });
-    
+
     expect(state).toEqual({
       burgerConstructor: expect.any(Object),
       ingredients: expect.any(Object),
@@ -19,7 +19,7 @@ describe('rootReducer', () => {
       orders: expect.any(Object),
       user: expect.any(Object)
     });
-    
+
     expect(state.burgerConstructor).not.toBeUndefined();
     expect(state.ingredients).not.toBeUndefined();
     expect(state.feed).not.toBeUndefined();

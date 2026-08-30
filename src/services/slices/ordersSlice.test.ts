@@ -46,7 +46,6 @@ const mockCreateOrderResponse = {
 };
 
 describe('ordersSlice', () => {
-
   let mockGetOrdersApi: jest.Mock;
   let mockOrderBurgerApi: jest.Mock;
   let mockGetOrderByNumberApi: jest.Mock;
